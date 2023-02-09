@@ -1,0 +1,22 @@
+.greeting {
+    padding: 10px;
+    text-align: right;
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 40px;
+    }
+ 
+}
+.name {
+    padding: 10px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    &::placeholder  {
+        color: #fff;
+        opacity: .6;
+    }
+}
+  

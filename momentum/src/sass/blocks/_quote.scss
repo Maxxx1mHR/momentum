@@ -1,0 +1,18 @@
+.change-quote {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 30px;
+    background-image: url("../assets/svg/reload.svg");  
+}
+
+.quote {
+    min-height: 32px;
+}
+
+.author {
+    min-height: 20px;
+}

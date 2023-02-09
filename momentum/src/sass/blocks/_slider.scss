@@ -1,0 +1,35 @@
+.slider {
+    &-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+        opacity: .5;
+        cursor: pointer;
+        transition: all 2s;  
+
+        &:hover {
+            opacity: 1;
+        }
+    }    
+}
+  
+.slide {
+    &-prev {
+        left: 20px;
+        &_min {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &-next {
+        right: 20px;
+        &_min {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+
