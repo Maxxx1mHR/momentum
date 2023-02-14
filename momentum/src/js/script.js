@@ -3,7 +3,8 @@ import {time} from './modules/time';
 import {setName} from './modules/greeting';
 import slider from './modules/slider';
 import {getQuotes} from './modules/quote';
-import {weather} from './modules/weather';
+import weather from './modules/weather';
+
 
 document.addEventListener('DOMContentLoaded', () => { 
 
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setName();
     slider();
     getQuotes();
+    weather();
 
 
 
