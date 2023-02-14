@@ -7,6 +7,13 @@
     outline: none;
     margin-bottom: 30px;
     background-image: url("../assets/svg/reload.svg");  
+    opacity: .6;
+    cursor: pointer;
+    transition: all .6s;  
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 .quote {
