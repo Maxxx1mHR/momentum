@@ -6,7 +6,6 @@ import {getQuotes} from './modules/quote';
 import weather from './modules/weather';
 import player from './modules/player';
 
-
 document.addEventListener('DOMContentLoaded', () => { 
 
     time();
@@ -14,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slider();
     getQuotes();
     weather();
-    
+    player();
+
 
 
 
