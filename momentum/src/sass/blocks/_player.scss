@@ -20,6 +20,7 @@
         align-items: center;
         justify-content: space-between;
         width: 120px;
+        margin-bottom: 28px;
     }
 }
 
@@ -33,6 +34,28 @@
     }
     &-next {
         background-image: url("../assets/svg/play-next.svg");
+    }
+    &-item {
+        text-align: left;
+        position: relative;
+        padding: 5px 5px 5px 20px;
+        list-style: none;
+        opacity: 0.8;
+        cursor: pointer;
+        &:before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-weight: 900;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+.item-active {
+    &::before {
+        color: #C5B358;
     }
 }
 

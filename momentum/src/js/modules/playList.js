@@ -13,6 +13,11 @@ const playList = [
       title: 'River Flows In You',
       src: 'src/assets/sounds/River Flows In You.mp3',
       duration: '03:50'
+    }, 
+    {
+      title: 'Summer Wind',
+      src: 'src/assets/sounds/Summer Wind.mp3',
+      duration: '03:50'
     }
   ];
   export default playList;
