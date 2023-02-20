@@ -1,0 +1,18 @@
+.translate {
+    gap: 5px;
+    justify-content: end;
+    align-items: flex-end;
+    display: flex;
+    text-align: right;
+    height: 10vh;
+}
+.translate__btn {
+    cursor: pointer;
+    opacity: .5;
+    width: 40px;
+    height: 40px;
+}
+
+.translate_active {
+    opacity: 1;
+}
