@@ -5,6 +5,7 @@ import slider from './modules/slider';
 import {getQuotes} from './modules/quote';
 import weather from './modules/weather';
 import player from './modules/player';
+import changeLanguage from './modules/change-language';
 
 document.addEventListener('DOMContentLoaded', () => { 
 
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getQuotes();
     weather();
     player();
-
+    changeLanguage();
 
 
 

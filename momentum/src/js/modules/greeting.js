@@ -1,8 +1,8 @@
 //Greeting
 const greeting = document.querySelector('.greeting');
 const userName = document.querySelector('.name');
-const translateButtonRu = document.querySelector('.translate__btn_ru');
-const translateButtonEn = document.querySelector('.translate__btn_en');
+// const translateButtonRu = document.querySelector('.translate__btn_ru');
+// const translateButtonEn = document.querySelector('.translate__btn_en');
 
 const greetingTranslation = {
     ru: ['Доброе утро', 'Добрый день', 'Добрый вечер', 'Спокойной ночи'],
@@ -23,35 +23,25 @@ function getTimeOfDay() {
     }
 }
 
+// translateButtonRu.addEventListener('click', () => {
+//     translateToRussianLanguage();
+//  });
 
-//Вывод приветсвия
-// function showGreeting() { 
-//     const currentDate = new Date();
-//     const hours = currentDate.getHours();
-//     if (hours >= 6 && hours < 12) {
-//         greeting.textContent = `Доброе утро`;
-//     } else if (hours >= 12 && hours < 18) {
-//         greeting.textContent = `Добрый день`;
-//     } else if (hours >= 18 && hours < 24) {
-//         greeting.textContent = `Добрый вечер`;
-//     } else {
-//         greeting.textContent = 'Спокойной ночи';
-//     }
-// }
+//  const translateToRussianLanguage = () => {
+//     localStorage.setItem('language', 'ru');
+//     translateButtonEn.classList.remove('translate_active');
+//     translateButtonRu.classList.add('translate_active');
+//  }
 
-translateButtonRu.addEventListener('click', () => {
-    localStorage.setItem('language', 'ru');
-    translateButtonEn.classList.remove('translate_active');
-    translateButtonRu.classList.add('translate_active');
- });
+// translateButtonEn.addEventListener('click', () => {
+//     translateToEnglishLanguage();
+// });
 
-translateButtonEn.addEventListener('click', () => {
-   localStorage.setItem('language', 'en');
-   translateButtonEn.classList.add('translate_active');
-   translateButtonRu.classList.remove('translate_active');
-});
-
-
+// const translateToEnglishLanguage = () => {
+//     localStorage.setItem('language', 'en');
+//     translateButtonEn.classList.add('translate_active');
+//     translateButtonRu.classList.remove('translate_active');
+// } 
 
 
 function showGreeting() { 
@@ -79,8 +69,6 @@ function showGreeting() {
             greeting.textContent = greetingTranslation.en[3];
         }
     }
-
-
 }
 
 //Установка имени пользователеем
