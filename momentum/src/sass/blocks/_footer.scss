@@ -14,3 +14,58 @@
     height: 20vh;
 
 }
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 10vh;
+    @include media-mobile {
+        justify-content: center;
+    }
+}
+
+.github {
+    opacity: .6;
+    cursor: pointer;
+    transition: all .6s;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    @include media-mobile {
+        display: none;
+    }
+    
+}
+
+.logo-link {
+    display: block;
+    transition: all .6s;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.logo {
+    pointer-events: none;
+    width: 150px;
+    fill:rgb(137, 134, 134);
+    opacity: .8;
+}
+
+.year {
+    margin-top: 10px;
+    color: rgb(137, 134, 134);
+    @include media-mobile {
+        display: none;
+    }
+}

@@ -2,6 +2,10 @@
 @import 'libs/fonts';
 @import 'libs/owfont-regular';
 
+@import 'base/constants';
+@import 'base/mixins';
+
+
 @import 'blocks/weather';
 @import 'blocks/slider';
 @import 'blocks/time';
@@ -11,6 +15,8 @@
 @import 'blocks/player';
 @import 'blocks/translate';
 @import 'blocks/footer';
+
+
 
 * {
     margin: 0;
@@ -36,6 +42,10 @@ body {
     height: 30vh;
     min-height: 220px;  
     padding: 20px;
+    @include media-mobile {
+        padding: 10px;
+    }
+
 }
 
 .main {

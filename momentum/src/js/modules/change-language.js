@@ -1,8 +1,13 @@
+import {getWeather} from './weather';
+import { showDate } from './date';
+import { getQuotes } from './quote';
+
 const translateButtonRu = document.querySelector('.translate__btn_ru');
 const translateButtonEn = document.querySelector('.translate__btn_en');
-import {getWeather} from './weather';
+
 const city = document.querySelector('.city');
 
+// let languagePage = localStorage.getItem('language');
 
 function changeLanguage() {
 
@@ -20,6 +25,8 @@ function changeLanguage() {
         translateButtonEn.classList.remove('translate_active');
         translateButtonRu.classList.add('translate_active');
         getWeather(city.value);
+        showDate();
+        getQuotes();
      }
     
     translateButtonEn.addEventListener('click', () => {
@@ -31,7 +38,12 @@ function changeLanguage() {
         translateButtonEn.classList.add('translate_active');
         translateButtonRu.classList.remove('translate_active');
         getWeather(city.value);
+        showDate();
+        getQuotes();
     } 
+
+
+
 
 }
 

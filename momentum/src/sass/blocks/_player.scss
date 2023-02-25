@@ -21,6 +21,9 @@
         justify-content: space-between;
         width: 120px;
         margin-bottom: 28px;
+        @include media-mobile {
+            width: 110px;
+        }
     }
 }
 
@@ -42,6 +45,9 @@
         list-style: none;
         opacity: 0.8;
         cursor: pointer;
+        @include media-mobile {
+            display: none;
+        }
         &:before {
             content: "\2713";
             position: absolute;

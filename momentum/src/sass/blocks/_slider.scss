@@ -18,6 +18,9 @@
 .slide {
     &-prev {
         left: 20px;
+        @include media-mobile {
+            left: 10px;
+        }
         &_min {
             width: 32px;
             height: 32px;
@@ -25,6 +28,9 @@
     }
     &-next {
         right: 20px;
+        @include media-mobile {
+            right: 10px;
+        }
         &_min {
             width: 32px;
             height: 32px;

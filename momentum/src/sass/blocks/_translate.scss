@@ -4,13 +4,20 @@
     align-items: flex-end;
     display: flex;
     text-align: right;
-    height: 10vh;
+    // height: 10vh;
+    @include media-mobile {
+        justify-content: center;
+    }
 }
 .translate__btn {
     cursor: pointer;
     opacity: .5;
     width: 40px;
     height: 40px;
+    transition: .6s;
+    &:hover {
+       transform: scale(1.1);
+    }
 }
 
 .translate_active {

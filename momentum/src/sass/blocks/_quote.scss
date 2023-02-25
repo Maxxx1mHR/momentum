@@ -10,6 +10,7 @@
     opacity: .6;
     cursor: pointer;
     transition: all .6s;  
+    min-height: 32px;
     &:hover {
         opacity: 1;
         transform: scale(1.1);
@@ -22,4 +23,7 @@
 
 .author {
     min-height: 20px;
+    @include media-tablet {
+        margin-top: 10px;
+    }
 }

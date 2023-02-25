@@ -13,7 +13,11 @@ async function getWeather(selector) {
     const respone = await fetch(url);
     const data = await respone.json();
     weatherIcon.className = 'weather-icon owf';
+
     city.value = selector;
+    
+    localStorage.setItem('currentCity', city.value);
+
 
     if (!city.value.match(/[0-9]/) && city.value !== '') {         
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
@@ -21,16 +25,15 @@ async function getWeather(selector) {
         weatherDescription.textContent = `${data.weather[0].description}`;
         languagePage === 'ru' ? (
             wind.textContent = `Скорость ветра: ${Math.floor(data.wind.speed)} м/с`) : 
-            (wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} м/с`);
-        
-        // wind.textContent = `Скорость ветра: ${Math.floor(data.wind.speed)} м/с`;
-        // humidity.textContent = `Влажность: ${data.main.humidity}%`;
+            (wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`);
         languagePage === 'ru' ? (
             humidity.textContent = `Влажность: ${data.main.humidity}%`) : 
             (humidity.textContent = `Humidity: ${data.main.humidity}%`);
         weatherError.textContent = '';
     } else {
-        weatherError.textContent = `Ошибка! Город ${city.value} не найден`;
+        languagePage === 'ru' ? (
+            weatherError.textContent = `Ошибка! Город ${city.value} не найден`) :
+            (weatherError.textContent = `Error! City ${city.value} not found`)
         temperature.textContent = '';
         weatherDescription.textContent = '';
         wind.textContent = '';
@@ -39,8 +42,8 @@ async function getWeather(selector) {
 }
 
 function weather() {
-
-    getWeather('Минск');
+    localStorage.getItem('currentCity') ? getWeather(localStorage.getItem('currentCity')) : getWeather('Минск');
+    // getWeather('Минск');
     city.addEventListener('change', () => {
         getWeather(city.value);
     });
