@@ -8,7 +8,11 @@ function showDate() {
     const currentDate = new Date();
     const options = {weekday: 'long', month: 'long', day: 'numeric'};
 
-    const modifyDate = currentDate.toLocaleDateString(languagePage, options);
+    // console.log(languagePage);
+    // console.log(languagePage == 'ru-RU');
+    
+    let modifyDate = currentDate.toLocaleDateString(languagePage, options);
+    // console.log(modifyDate);
     //Первую букву делаем заглавной
     date.textContent = modifyDate.charAt(0).toUpperCase() + modifyDate.slice(1);
 }

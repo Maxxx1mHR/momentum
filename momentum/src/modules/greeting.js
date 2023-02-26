@@ -28,7 +28,7 @@ function getTimeOfDay() {
 //  });
 
 //  const translateToRussianLanguage = () => {
-//     localStorage.setItem('language', 'ru');
+//     localStorage.setItem('language', 'ru-RU');
 //     translateButtonEn.classList.remove('translate_active');
 //     translateButtonRu.classList.add('translate_active');
 //  }
@@ -38,7 +38,7 @@ function getTimeOfDay() {
 // });
 
 // const translateToEnglishLanguage = () => {
-//     localStorage.setItem('language', 'en');
+//     localStorage.setItem('language', 'en-US');
 //     translateButtonEn.classList.add('translate_active');
 //     translateButtonRu.classList.remove('translate_active');
 // } 
@@ -48,7 +48,7 @@ function showGreeting() {
     const currentDate = new Date();
     const hours = currentDate.getHours();
 
-    if (localStorage.getItem('language') === 'ru') {
+    if (localStorage.getItem('language') === 'ru-RU') {
         if (hours >= 6 && hours < 12) {
             greeting.textContent = greetingTranslation.ru[0];
         } else if (hours >= 12 && hours < 18) {

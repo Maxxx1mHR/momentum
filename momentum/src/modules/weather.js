@@ -23,15 +23,15 @@ async function getWeather(selector) {
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
         temperature.textContent = `${Math.floor(data.main.temp)}°C`;
         weatherDescription.textContent = `${data.weather[0].description}`;
-        languagePage === 'ru' ? (
+        languagePage === 'ru-RU' ? (
             wind.textContent = `Скорость ветра: ${Math.floor(data.wind.speed)} м/с`) : 
             (wind.textContent = `Wind speed: ${Math.floor(data.wind.speed)} m/s`);
-        languagePage === 'ru' ? (
+        languagePage === 'ru-RU' ? (
             humidity.textContent = `Влажность: ${data.main.humidity}%`) : 
             (humidity.textContent = `Humidity: ${data.main.humidity}%`);
         weatherError.textContent = '';
     } else {
-        languagePage === 'ru' ? (
+        languagePage === 'ru-RU' ? (
             weatherError.textContent = `Ошибка! Город ${city.value} не найден`) :
             (weatherError.textContent = `Error! City ${city.value} not found`)
         temperature.textContent = '';

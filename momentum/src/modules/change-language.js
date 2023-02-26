@@ -11,7 +11,7 @@ const city = document.querySelector('.city');
 
 function changeLanguage() {
 
-    if (localStorage.getItem('language') !== 'ru') {
+    if (localStorage.getItem('language') !== 'ru-RU') {
         translateButtonRu.classList.remove('translate_active');
         translateButtonEn.classList.add('translate_active')
     }
@@ -21,7 +21,7 @@ function changeLanguage() {
      });
     
      const translateToRussianLanguage = () => {
-        localStorage.setItem('language', 'ru');
+        localStorage.setItem('language', 'ru-RU');
         translateButtonEn.classList.remove('translate_active');
         translateButtonRu.classList.add('translate_active');
         getWeather(city.value);
@@ -34,7 +34,7 @@ function changeLanguage() {
     });
     
     const translateToEnglishLanguage = () => {
-        localStorage.setItem('language', 'en');
+        localStorage.setItem('language', 'en-US');
         translateButtonEn.classList.add('translate_active');
         translateButtonRu.classList.remove('translate_active');
         getWeather(city.value);

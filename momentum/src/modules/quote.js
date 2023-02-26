@@ -10,7 +10,7 @@ async function getQuotes() {
     const res = await fetch(quotes);
     const data = await res.json(); 
 
-    languagePage === 'ru' ? showRussianQuotes() : showEnglishQuotes();
+    languagePage === 'ru-RU' ? showRussianQuotes() : showEnglishQuotes();
     
 
     function showRussianQuotes() {

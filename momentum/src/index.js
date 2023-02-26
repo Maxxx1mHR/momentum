@@ -10,8 +10,8 @@ import weather from './modules/weather';
 import player from './modules/player';
 import changeLanguage from './modules/change-language';
 
-// document.addEventListener('DOMContentLoaded', () => { 
-    window.onload = function() {
+document.addEventListener('DOMContentLoaded', () => { 
+
         time();
         setName();
         slider();
@@ -19,7 +19,5 @@ import changeLanguage from './modules/change-language';
         weather();
         player();
         changeLanguage();
-    }
-
-
-// });
+    
+});
