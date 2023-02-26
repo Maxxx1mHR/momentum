@@ -12,6 +12,11 @@ import changeLanguage from './modules/change-language';
 
 document.addEventListener('DOMContentLoaded', () => { 
 
+        
+        if (!localStorage.getItem('language')) {
+                localStorage.setItem('language', 'ru-RU');
+        }
+
         time();
         setName();
         slider();
