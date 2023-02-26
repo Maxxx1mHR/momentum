@@ -1,4 +1,7 @@
 'use strict';
+import './sass/style.scss'
+
+
 import {time} from './modules/time';
 import {setName} from './modules/greeting';
 import slider from './modules/slider';
@@ -16,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     weather();
     player();
     changeLanguage();
-
 
 
 });

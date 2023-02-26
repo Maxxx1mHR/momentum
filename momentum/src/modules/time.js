@@ -1,7 +1,7 @@
 import {showDate} from './date';
 import {showGreeting} from './greeting';
 
-let languagePage = localStorage.getItem('language');
+// let languagePage = localStorage.getItem('language');
 
 function time () {
     const time = document.querySelector('.time');
