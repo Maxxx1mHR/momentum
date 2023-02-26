@@ -10,15 +10,16 @@ import weather from './modules/weather';
 import player from './modules/player';
 import changeLanguage from './modules/change-language';
 
-document.addEventListener('DOMContentLoaded', () => { 
+// document.addEventListener('DOMContentLoaded', () => { 
+    window.onload = function() {
+        time();
+        setName();
+        slider();
+        getQuotes();
+        weather();
+        player();
+        changeLanguage();
+    }
 
-    time();
-    setName();
-    slider();
-    getQuotes();
-    weather();
-    player();
-    changeLanguage();
 
-
-});
+// });
